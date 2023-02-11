@@ -1,4 +1,4 @@
-todo:
+# todo:
 
 1) add project details in json
 2) add project screenshots to mediaGithub
