@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4ab7fd38.css",
+    "main.js": "/static/js/main.3463e7c5.js",
+    "static/js/787.e8a755ca.chunk.js": "/static/js/787.e8a755ca.chunk.js",
+    "static/media/sumitkawale_resume.pdf": "/static/media/sumitkawale_resume.1615f38d1d5a8e7e4975.pdf",
+    "static/media/resume_logo.svg": "/static/media/resume_logo.b9e4423aaee2a45a36f98ff37bfb8569.svg",
+    "index.html": "/index.html",
+    "main.4ab7fd38.css.map": "/static/css/main.4ab7fd38.css.map",
+    "main.3463e7c5.js.map": "/static/js/main.3463e7c5.js.map",
+    "787.e8a755ca.chunk.js.map": "/static/js/787.e8a755ca.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4ab7fd38.css",
+    "static/js/main.3463e7c5.js"
+  ]
+}
