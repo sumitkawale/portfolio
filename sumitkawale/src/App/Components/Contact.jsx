@@ -5,10 +5,6 @@ import { imgSrc } from "./../App"
 
 import { bounce } from "../../textAnimation"
 
-import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
-import FormControl from '@mui/material/FormControl';
-
 const Contact = () => {
 
     useEffect(() => {
@@ -73,22 +69,7 @@ const Contact = () => {
             </div>
             <div className="contactMeForm">
                 <form>
-                    <FormControl sx={{ my: 2, width: '48%' }} className="inputControl" variant="filled">
-                        <TextField id="filled-basic" label="Your Name" variant="outlined" />
-                    </FormControl>
-                    <FormControl sx={{ my: 2, width: '48%' }} className="inputControl" variant="filled">
-                        <TextField id="filled-basic" label="E-Mail Address" variant="outlined" />
-                    </FormControl>
-                    <FormControl sx={{ my: 2, width: '98%' }} variant="filled">
-                        <TextField
-                            id="outlined-multiline-static"
-                            label="Message"
-                            multiline
-                            rows={4}
-                            fullWidth
-                        />
-                    </FormControl>
-                    <Button onClick={() => { alert("I'm developing this site. Response taking is not implemented yet.") }} sx={{ my: 2 }} style={{ color: "#323330", fontSize: "1.1em", background: "#f7df1e", borderColor: "#f7df1e" }} variant="outlined">Send</Button>
+                    <img alt="programmer png" src={process.env.PUBLIC_URL + "/programmer.png"} style={{ width: "450px", mixBlendMode: "darken" }} />
                 </form>
             </div>
         </div>

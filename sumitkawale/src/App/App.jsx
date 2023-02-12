@@ -14,7 +14,8 @@ let ip = "13.234.119.204";
 ip = "localhost";
 // ip = "192.168.0.107";
 
-const serverURL = "http://" + ip + ":2324/sumitkawale";
+let serverURL = "http://" + ip + ":2324/sumitkawale";
+serverURL = "https://sumitkawale.github.io/sumitkawale.web.media.github.io/";
 const imgSrc = "https://sumitkawale.github.io/sumitkawale.web.media.github.io/";
 
 function App() {
@@ -23,12 +24,12 @@ function App() {
     const [projectsData, updateProjectsData] = useState(projectsDataDefault);
 
     useEffect(() => {
-        fetch(serverURL + "/about")
+        fetch(serverURL + "data/aboutData.json")
             .then(d => d.json())
             .then(d => updateAboutData(d))
             .catch(e => updateAboutData(aboutDataDefault));
 
-        fetch(serverURL + "/projects")
+        fetch(serverURL + "data/projectsData.json")
             .then(d => d.json())
             .then(d => updateProjectsData(d))
             .catch(e => updateProjectsData(projectsDataDefault));

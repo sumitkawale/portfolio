@@ -56,4 +56,4 @@ const NavBar = (props) => {
 }
 
 export default NavBar;
-export {gotoTop}
+export {gotoTop, ScrollLink}

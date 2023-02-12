@@ -75,7 +75,7 @@ const currentStatus = [
         title: "(INTERNSHIP) Shivankit TechSolutions, Delhi",
         link: "https://www.linkedin.com/company/shivankittech/?originalSubdomain=in",
         details: "Working as <strong>Web Developer</strong> intern",
-        from: "21-May-2022 - present",
+        from: "1-Jan-2023 - present",
         description: `
             I'm working on technologies <strong className='language'>JavaScript, NodeJS, PHP, MySql</strong> etc<br/>
             I'm developing Service and Utility Products.<br/> 
@@ -87,18 +87,33 @@ const currentStatus = [
 
 const experience = [
     {
-        id: "sts",
+        id: "shivankit",
         logo: "/about/shivankitTechSolutions.png",
         logoTxt: "S",
         alt: "SHIVANKIT_TECH_SOLUTIONS_LOGO",
         title: "(INTERNSHIP) Shivankit TechSolutions, Delhi",
         link: "https://www.linkedin.com/company/shivankittech/?originalSubdomain=in",
         details: "Working as <strong>Web Developer</strong> intern",
-        duration: "<i>From: </i> 21-May-2022 - present",
+        duration: "<i>From: </i> 1-Jan-2023 - present",
         description: `
             I'm working on technologies <strong className='language'>JavaScript, NodeJS, PHP, MySql</strong> etc.<br/>
             I'm developing Service and Utility Products.<br/> 
             I'm managing 80-85% work in both backend and frontend
+        `,
+    },
+    {
+        id: "fanadda",
+        logo: "/about/fanadda.png",
+        logoTxt: "FA",
+        alt: "FanAdda",
+        title: "(INTERNSHIP) FanAdda",
+        link: "https://www.linkedin.com/company/fanadda/?originalSubdomain=in",
+        details: "Working as <strong>Web Developer</strong> intern",
+        duration: "<i>From: </i> 21-May-2022 to 31-Dec-2022",
+        description: `
+            I've worked on technologies <strong className='language'>JavaScript, NodeJS, PHP, Laravel, MySql</strong> etc.<br/>
+            I had developed Service and Utility Products.<br/> 
+            I'm managing full work in both backend and frontend on tasks
         `,
     },
     {

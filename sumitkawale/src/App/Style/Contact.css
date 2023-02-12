@@ -5,11 +5,11 @@
 }
 
 #contactParent {
-    font-family: 'Source Sans Pro', sans-serif;
-    color      : #323330;
+    font-family     : 'Source Sans Pro', sans-serif;
+    color           : #323330;
     background-color: white;
-    padding    : 10px;
-    padding-top: 80px;
+    padding         : 10px;
+    padding-top     : 80px;
 }
 
 /* ///////////////////////////////////// */
@@ -76,7 +76,7 @@
     text-align: center;
 }
 
-#contactParent #contact .contactMeSocial>div .contact span a{
+#contactParent #contact .contactMeSocial>div .contact span a {
     color: blue;
 }
 
@@ -111,7 +111,7 @@
     display        : flex;
     flex-direction : row;
     flex-wrap      : wrap;
-    justify-content: space-around;
+    justify-content: flex-end;
     align-items    : center;
 }
 
@@ -119,6 +119,11 @@
 
 @media (max-width:990px) {
     #contactParent #contact .contactMeSocial>div h2 {
+        display: none;
+    }
+
+    #contactParent #contact .contactMeForm form img,
+    hr {
         display: none;
     }
 
@@ -147,7 +152,7 @@
     }
 
     #contactParent #contact .contactMeSocial>div .contact .whatsappImage {
-        width      : 33px;
+        width         : 33px;
         /* margin-left: -3px; */
     }
 

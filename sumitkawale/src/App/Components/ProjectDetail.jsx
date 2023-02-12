@@ -2,34 +2,39 @@ import React, { useEffect, useState } from "react"
 import { useParams } from "react-router-dom";
 import parse from "html-react-parser"
 import GitHubIcon from '@mui/icons-material/GitHub';
+import { ScrollLink } from "./NavBar";
 import LaunchIcon from '@mui/icons-material/Launch';
 import NavBar, { gotoTop } from "./NavBar";
 import projectsDataDefault from "../../defaultData/projectsDataDefault"
-
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import Avatar from '@mui/material/Avatar';
 import { stringAvatar } from "./AboutComponents/CurrentStatus"
+import { serverURL } from "../App";
 
 import "../Style/ProjectDetail.css"
 
-function getProjectData(id) {
-    return projectsDataDefault.filter((data) => {
-        if (data.id === id) {
-            return true;
-        } return false;
-    })[0];
-}
-
 const ProjectDetail = (props) => {
     const [loader, showLoader] = useState("display-block");
+    const [projectsData, updateProjectsData] = useState(projectsDataDefault);
+
     useEffect(() => {
         gotoTop();
         setTimeout(() => {
             showLoader("display-none");
         }, 1000);
+
+        fetch(serverURL + "data/projectsData.json")
+            .then(d => d.json())
+            .then(d => updateProjectsData(d))
+            .catch(e => updateProjectsData(projectsDataDefault));
     }, []);
 
     const params = useParams();
-    let projectData = getProjectData(params.projectIDTXT);
+    let projectData = projectsData.filter((data) => {
+        if (data.id === params.projectIDTXT) {
+            return true;
+        } return false;
+    })[0];
 
     return <>
         <NavBar link={true} />
@@ -43,11 +48,15 @@ const ProjectDetail = (props) => {
 
         <div id="projectDetailsParent">
             <div className="project-container">
+                <ScrollLink htmlFor="navbarResponsiveBtn" link={true} to={"projectsParent"}>
+                    <button className="backBtn"><ArrowBackIcon /></button>
+                </ScrollLink>
+
                 <div className="project-header">
                     <h1 className="project-title"> {parse(projectData.title)} </h1>
                     <div className="project-languages">
-                        {projectData.technologies.map(technology => {
-                            return <span>{technology.name}</span>
+                        {projectData.technologies.map((technology, i) => {
+                            return <span key={i + "screenshot"}>{technology.name}</span>
                         })}
                     </div>
                     <div className="project-links">
@@ -64,8 +73,8 @@ const ProjectDetail = (props) => {
                 <div className="project-point card">
                     <h1>Screenshots</h1>
                     <div>
-                        {projectData.data.screenshots.map(screenshot => {
-                            return <div className="screenshot">
+                        {projectData.data.screenshots.map((screenshot, i) => {
+                            return <div className="screenshot" key={i + "screenshot"}>
                                 <h2>{screenshot.title}</h2>
                                 <img className="screenshot-img" src={screenshot.url} alt={"screenshot"} />
                                 <p className="screenshot-description">
@@ -90,11 +99,13 @@ const ProjectDetail = (props) => {
                             {projectData.data.developers.map((developer, i) => {
                                 return (
                                     <a className="memberCard"
+                                        key={i + "screenshot"}
                                         href={developer.username === developer.name ? "##" : "https://github.com/" + developer.username}
                                         target={developer.username === developer.name ? "_self" : "_blank"} rel="noreferrer">
 
                                         <Avatar
                                             {...stringAvatar(developer.logoTxt)}
+                                            key={i + "screenshot"}
                                             alt={developer.name + " profile image"}
                                             src={developer.avatar}
                                             className={"bg" + (1 + (i % 5))}
@@ -109,8 +120,8 @@ const ProjectDetail = (props) => {
                             })}
                         </div>
                         <div className="project-languages">
-                            {projectData.technologies.map(technology => {
-                                return <span>{technology.name}</span>
+                            {projectData.technologies.map((technology, i) => {
+                                return <span key={i + "screenshot"}>{technology.name}</span>
                             })}
                         </div>
                     </div>
