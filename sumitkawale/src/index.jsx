@@ -17,7 +17,7 @@ root.render(
 			<Route exact path="/project/:projectIDTXT" element={<ProjectDetails />} />
 			<Route exact path="/resume" element={<Resume />} />
 			<Route path="*" element={<Error404 />} />
-		</Routes>
+		</Routes> 
 	</BrowserRouter>
 );
 
