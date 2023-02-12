@@ -1,8 +1,8 @@
 {
   "name": "sumitkawale",
-  "version": "0.1.0",
-  "private": false,
-  "homepage": "https://sumitkawale.github.io/portfolio",
+  "version": "0.1.1",
+  "private": true,
+  "homepage": "https://sumitkawale.github.io/portfolio/",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",

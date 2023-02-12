@@ -15,7 +15,7 @@ const ScrollLink = (props) => {
         {props.link || <a className="animate" onClick={(e) => { scroll(props.to, e); document.getElementById("navbarResponsiveBtn").click() }}>{props.children}</a>}
 
         {/* eslint-disable-next-line */}
-        {props.link && <Link to={"/#" + props.to} className="animate" onClick={(e) => { setTimeout(() => { e.target.click() }, 1000); document.getElementById("navbarResponsiveBtn").click() }}>{props.children}</Link>}
+        {props.link && <Link to={"/#" + props.to} id={props.to + "link"} className="animate" onClick={(e) => { setTimeout(() => { e.target.click(); scroll(props.to, e); }, 1000, e); document.getElementById("navbarResponsiveBtn").click() }}>{props.children}</Link>}
     </>
 }
 
@@ -56,4 +56,4 @@ const NavBar = (props) => {
 }
 
 export default NavBar;
-export {gotoTop, ScrollLink}
+export { gotoTop, ScrollLink }
