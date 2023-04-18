@@ -75,7 +75,7 @@ function About(props) {
     let aboutData = props.value;
 
     return <div id="aboutParent" className='old'>
-        <div className='mainTitle'><h1>About my </h1><span></span><span></span></div>
+        <div className='mainTitle'><h1>About </h1><span></span><span></span></div>
         <div id="about">
             <img className='skImage' src={imgSrc + aboutData.self.profilePhoto} alt="My Pic" />
             <div className="aboutTabs">
