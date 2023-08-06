@@ -1,0 +1,165 @@
+* {
+    margin    : 0;
+    padding   : 0;
+    box-sizing: border-box;
+}
+
+#projectsParent {
+    font-family: 'Source Sans Pro', sans-serif;
+    color      : #323330;
+    background : #fafaf9;
+    box-shadow : 0px 10px 5px 10px #fafaf9;
+    padding    : 10px;
+    padding-top: 80px;
+    margin-top : 2em;
+    overflow   : hidden;
+}
+
+#projects {
+    display        : flex;
+    flex-direction : column;
+    align-items    : center;
+    justify-content: center;
+    padding-bottom : 1rem;
+}
+
+.project {
+    display        : flex;
+    flex-direction : row;
+    justify-content: center;
+    align-content  : center;
+    align-items    : center;
+    transition     : all ease-in-out 0.3s;
+    outline        : 3px solid #32333011;
+    border-radius  : 5px;
+    width          : 70%;
+    margin         : 1em 0;
+}
+
+.project:hover {
+    transform : scale(1.07, 1.07);
+    background: #fcfcfc;
+}
+
+.project>img {
+    width         : 50%;
+    mix-blend-mode: darken;
+}
+
+.onResponsive {
+    display: none;
+}
+
+.project>div {
+    width  : 100%;
+    padding: 2em;
+    display: flex;
+}
+
+.project>div>span {
+    display   : inline-block;
+    text-align: left;
+}
+
+.reverse {
+    justify-content: right;
+}
+
+.project>div>span h2 {
+    font-weight: 500;
+    font-weight: 3em;
+}
+
+.project>div>span h5 {
+    display         : inline-block;
+    background-color: #f7df1e33;
+    padding         : 5px 10px;
+    border-radius   : 5px;
+}
+
+.project>div>span p {
+    font-size: 1.15em;
+}
+
+.project>div>span .technologies {
+    display        : flex;
+    flex-direction : row;
+    flex-wrap      : wrap;
+    justify-content: left;
+    align-items    : center;
+}
+
+.space-around {
+    justify-content: space-around !important;
+}
+
+.project>div>span .technologies img {
+    width : 30px;
+    margin: 8px;
+}
+
+.project>div>span a {
+    display         : inline-block;
+    text-decoration : none;
+    background-color: #f7df1e;
+    color           : #323330;
+    font-weight     : 900;
+    padding         : 10px 7px;
+    border-radius   : 4px;
+    cursor          : pointer;
+    margin          : 2px;
+}
+
+/* ///////////////////////////////////// */
+
+@media (max-width:990px) {
+    .project {
+        flex-direction: column;
+        width         : 60%;
+        margin        : 1.5em 0;
+    }
+
+    .project:first-child {
+        margin-top: 1em;
+    }
+
+    .project>img {
+        width: 100%;
+    }
+
+    .onResponsive {
+        display: block;
+    }
+
+    .onResponsiveHide {
+        display: none;
+    }
+
+    .project>div {
+        justify-content: center;
+    }
+
+    .project:hover {
+        transform: scale(1.1, 1.1);
+    }
+}
+
+@media (max-width:770px) {
+    .project {
+        width: 70%;
+    }
+}
+
+@media (max-width:600px) {
+    .project {
+        width: 95%;
+    }
+
+    .project>div {
+        padding: 1rem;
+    }
+
+    .project>div>span .technologies img {
+        margin: 5px;
+    }
+}

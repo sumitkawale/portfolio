@@ -1,0 +1,50 @@
+* {
+    margin    : 0;
+    padding   : 0;
+    box-sizing: border-box;
+}
+
+.errorDiv {
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    flex-direction : column;
+    flex-wrap      : wrap;
+    height         : 88vh;
+    font-family    : "Nunito", sans-serif;
+}
+
+.errorDiv h1 {
+    color    : #333333;
+    font-size: 8.5em;
+}
+
+.errorDiv p {
+    font-size: 1.2em;
+}
+
+a {
+    text-decoration: none;
+}
+
+.back {
+    font-size      : 1.1em;
+    font-family    : 'Nunito', sans-serif;
+    background     : orangered;
+    color          : #fdea59;
+    padding        : 10px 2.5em;
+    border-radius  : 0px 0px 20px 0px;
+    cursor         : pointer;
+    border         : none;
+    display        : flex;
+    flex-wrap      : nowrap;
+    justify-content: center;
+    align-content  : center;
+    align-items    : center;
+}
+
+.back svg {
+    margin-right: 10px;
+    width       : 20px;
+    fill        : #fdea59
+}
