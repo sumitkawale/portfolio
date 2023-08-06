@@ -1,0 +1,196 @@
+* {
+    margin    : 0;
+    padding   : 0;
+    box-sizing: border-box;
+}
+
+#contactParent {
+    font-family     : 'Source Sans Pro', sans-serif;
+    color           : #323330;
+    background-color: white;
+    padding         : 10px;
+    padding-top     : 80px;
+}
+
+/* ///////////////////////////////////// */
+
+
+#contactParent #contact {
+    display        : flex;
+    flex-wrap      : wrap;
+    flex-direction : row;
+    align-items    : center;
+    justify-content: space-evenly;
+    margin-top     : 10px;
+    color          : #323330;
+    font-family    : 'Nunito', sans-serif;
+}
+
+#contactParent #contact .contactMeForm {
+    width                 : 50%;
+    /* border             : 2px solid #f7de1ecc; */
+    border-radius         : 10px;
+    /* background-color   : #323330; */
+    padding               : 15px;
+}
+
+
+#contactParent #contact .contactMeSocial>div {
+    /* border       : 2px solid #f7de1e51;   */
+    border-radius: 10px;
+    margin       : 15px 0;
+}
+
+/* ///////////////////////////////////// */
+
+
+#contactParent #contact .contactMeSocial>div h2 {
+    font-size        : 1.6em;
+    /* border-bottom : 2px solid #32333031; */
+    padding-bottom   : 5px;
+    text-align       : center;
+    background-color : #323330dd;
+    color            : #f7df1e;
+    border-radius    : 10px;
+    padding          : 10px;
+}
+
+/* ///////////////////////////////// */
+#contactParent #contact .contactMeSocial>div .contact {
+    padding-top: 20px;
+}
+
+#contactParent #contact .contactMeSocial>div .contact p {
+    display        : flex;
+    flex-direction : row;
+    flex-wrap      : nowrap;
+    justify-content: space-between;
+    align-items    : center;
+    padding        : 10px 30px;
+}
+
+#contactParent #contact .contactMeSocial>div .contact span {
+    display   : inline-block;
+    font-size : 1.18em;
+    width     : 100%;
+    text-align: center;
+}
+
+#contactParent #contact .contactMeSocial>div .contact span a {
+    color: blue;
+}
+
+#contactParent #contact .contactMeSocial>div .contact img {
+    width: 33px;
+}
+
+#contactParent #contact .contactMeSocial>div .contact .whatsappImage {
+    width      : 36px;
+    margin-left: -3px;
+}
+
+/* ///////////////////////////////// */
+
+
+/* ///////////////////////// */
+#contactParent #contact .contactMeSocial>div .socialMedia {
+    padding   : 5px 0;
+    text-align: center;
+}
+
+#contactParent #contact .contactMeSocial>div .socialMedia a img {
+    width : 33px;
+    margin: 0 25px;
+    cursor: pointer !important;
+}
+
+/* ///////////////////////// */
+
+/* /////////////////////////////////////////////// */
+#contactParent #contact .contactMeForm form {
+    display        : flex;
+    flex-direction : row;
+    flex-wrap      : wrap;
+    justify-content: flex-end;
+    align-items    : center;
+}
+
+/* /////////////////////////////////////////////// */
+
+@media (max-width:990px) {
+    #contactParent #contact .contactMeSocial>div h2 {
+        display: none;
+    }
+
+    #contactParent #contact .contactMeForm form img,
+    hr {
+        display: none;
+    }
+
+    #contactParent #contact {
+        flex-direction: column;
+        align-items   : center;
+    }
+
+    #contactParent #contact .contactMeForm {
+        width: 75%;
+    }
+
+    #contactParent #contact .contactMeForm .inputControl {
+        width : 98%;
+        margin: 10px 0;
+    }
+
+    #contactParent #contact .contactMeSocial>div .contact {
+        padding: 0;
+    }
+}
+
+@media (max-width:600px) {
+    #contactParent #contact .contactMeSocial>div .contact img {
+        width: 25px;
+    }
+
+    #contactParent #contact .contactMeSocial>div .contact .whatsappImage {
+        width         : 33px;
+        /* margin-left: -3px; */
+    }
+
+    #contactParent #contact .contactMeSocial>div .contact {
+        padding: 0;
+    }
+
+    #contactParent #contact .contactMeSocial>div .contact span {
+        font-size: 1em;
+    }
+
+    #contactParent #contact .contactMeSocial>div .contact span a {
+        white-space: nowrap;
+    }
+
+    #contactParent #contact .contactMeSocial>div .contact p {
+        padding: 10px 15px;
+    }
+
+    #contactParent #contact .contactMeSocial>div h2 {
+        font-size: 1.7em;
+    }
+
+    #contactParent #contact .contactMeSocial>div .socialMedia {
+        padding: 5px 0;
+    }
+
+    #contactParent #contact .contactMeSocial>div .socialMedia a img {
+        width : 30px;
+        margin: 0 15px;
+    }
+
+    #contactParent #contact .contactMeForm {
+        width: 100%;
+    }
+
+    #contactParent #contact .contactMeForm .inputControl {
+        width : 98%;
+        margin: 10px 0;
+    }
+}

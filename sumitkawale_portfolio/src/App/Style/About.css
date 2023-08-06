@@ -1,0 +1,541 @@
+#aboutParent {
+    font-family     : 'Source Sans Pro', sans-serif;
+    color           : #323330;
+    background-color: white;
+    padding         : 10px;
+    padding-top     : 80px;
+}
+
+#about {
+    display        : flex;
+    justify-content: space-evenly;
+    flex-wrap      : wrap;
+    align-items    : flex-start;
+    color          : #323330;
+}
+
+#about .skImage {
+    width        : 30vw;
+    border       : 2px solid #f7de1e4e;
+    padding      : 1px;
+    border-radius: 10px;
+    margin       : 30px 0;
+}
+
+#about .skImageM {
+    display: none;
+}
+
+#about .aboutTabs {
+    width : 60vw;
+    margin: 30px 0;
+}
+
+/* ///////////////tabs - start//////////////// */
+
+.tabBar .tabButtons {
+    display      : flex;
+    border-bottom: 1px solid #f7df1e;
+}
+
+.tabBar .tabHeader {
+    position: relative;
+}
+
+.tabBar .tabHeader .tabButtons button {
+    font-size                : 1.2em;
+    position                 : relative;
+    padding                  : 5px 20px;
+    cursor                   : pointer;
+    outline                  : none;
+    border                   : none;
+    border-start-start-radius: 5px;
+    border-start-end-radius  : 5px;
+    border-bottom            : 2px solid transparent;
+    overflow                 : hidden;
+    transition               : all 0.2s;
+    background-color         : transparent;
+    color                    : #323330;
+}
+
+.tabBar .tabHeader .tabButtons button:focus {
+    border-bottom: 2px solid #f7c41e;
+}
+
+.tabBar .tabHeader .tabButtons button span {
+    position        : absolute;
+    transform       : translate(-50%, -50%);
+    background-color: #f7df1e;
+    border-radius   : 50% 0%;
+    pointer-events  : none;
+    animation       : ripple 1s;
+}
+
+@keyframes ripple {
+    0% {
+        width  : 0px;
+        height : 0px;
+        opacity: 0.5;
+    }
+
+    100% {
+        width  : 190px;
+        height : 150px;
+        opacity: 0;
+    }
+}
+
+.tabBar .tabHeader .activeBar {
+    display         : inline-block;
+    height          : 4px;
+    background-color: #f7df1e;
+    position        : absolute;
+    transition      : all ease-in-out 0.3s;
+    bottom          : .5px;
+}
+
+.display-none {
+    display: none;
+}
+
+.display-block {
+    display: block;
+}
+
+/* ///////////////tabs - end//////////////// */
+
+/* ///////////////////////////////////self - start/////////////////////////////////// */
+
+#about #self {
+    font-family: 'Nunito', sans-serif;
+}
+
+#about h2 {
+    font-size: 2em;
+}
+
+#about #self h3 {
+    padding-bottom: 20px;
+    border-bottom : 2px solid #3233301b;
+}
+
+#about #self h5 {
+    color           : #323330;
+    background-color: #f7de1e51;
+    font-family     : 'Roboto Mono', monospace;
+    display         : inline-block;
+    border-radius   : 3px;
+    padding         : 3px 5px;
+    font-size       : 0.688em;
+    margin-bottom   : 10px;
+}
+
+#about p {
+    font-size: 1.1em;
+    margin   : 10px 0;
+}
+
+#about #self a {
+    text-decoration : none;
+    background-color: #f7df1e;
+    color           : #323330;
+    font-weight     : 900;
+    padding         : 15px 18px;
+    border-radius   : 10px;
+}
+
+/* ///////////////////////////////////self - end/////////////////////////////////// */
+
+/* ///////////////////////////////////education, currentStatus, experience - start/////////////////////////////////// */
+
+#about #education,
+#about #currentStatus,
+#about #experience {
+    font-family: 'Nunito', sans-serif;
+}
+
+#about #education .educationCard,
+#about #currentStatus .currentStatusCard,
+#about #experience .experienceCard {
+    border-bottom     : 2px solid #32333022;
+    /* border-radius  : 10px; */
+    padding           : 20px;
+    display           : flex;
+    flex-direction    : row;
+    justify-content   : flex-start;
+    align-items       : flex-start;
+    margin            : 10px 0;
+}
+
+#about #education .educationCard .avatar,
+#about #currentStatus .currentStatusCard .avatar,
+#about #experience .experienceCard .avatar {
+    display: inline-block;
+}
+
+#about #education .educationCard .avatar .avatarLogo,
+#about #currentStatus .currentStatusCard .avatar .avatarLogo,
+#about #experience .experienceCard .avatar .avatarLogo {
+    background : #f7df1e;
+    font-weight: bold;
+    color      : #323330;
+}
+
+#about #education .educationCard .avatar a,
+#about #currentStatus .currentStatusCard .avatar a,
+#about #experience .experienceCard .avatar a {
+    text-decoration: none;
+}
+
+#about #education .educationCard .content,
+#about #currentStatus .currentStatusCard .content,
+#about #experience .experienceCard .content {
+    margin-left: 15px;
+    width      : 100%;
+}
+
+#about #education .educationCard h2,
+#about #currentStatus .currentStatusCard h2,
+#about #experience .experienceCard h2 {
+    border-bottom : 2px solid #3233300f;
+    padding-bottom: 10px;
+    margin-bottom : 10px;
+    font-size     : 1.5em;
+}
+
+#about #education .educationCard h2 a,
+#about #currentStatus .currentStatusCard h2 a,
+#about #experience .experienceCard h2 a {
+    text-decoration: none;
+    color          : #323330;
+}
+
+#about #education .educationCard h3,
+#about #currentStatus .currentStatusCard h3,
+#about #experience .experienceCard h3 {
+    font-weight: normal;
+}
+
+#about #education .educationCard .date,
+#about #currentStatus .currentStatusCard .date,
+#about #experience .experienceCard .date {
+    color  : #32333088;
+    padding: 0;
+    margin : 0;
+}
+
+#about #education .educationCard .other,
+#about #currentStatus .currentStatusCard .other,
+#about #experience .experienceCard .other {
+    margin-top: 0;
+}
+
+#about #education .educationCard .other .language,
+#about #currentStatus .currentStatusCard .other .language,
+#about #experience .experienceCard .other .language {
+    font-family     : 'Roboto Mono', monospace;
+    color           : #323330;
+    background-color: #f7de1e1e;
+    font-size       : 0.85em;
+    display         : inline-block;
+    border-radius   : 3px;
+    padding         : 1px 5px;
+    font-weight     : 500;
+}
+
+/* ///////////////////////////////////education, currentStatus, experience - end/////////////////////////////////// */
+
+/* ///////////////////////////////////skills - start/////////////////////////////////// */
+/* 
+.old #about #skills {
+    font-family: 'Roboto Mono', monospace;
+}
+
+.old #about #skills .cards {
+    display        : flex;
+    flex-direction : row;
+    flex-wrap      : wrap;
+    justify-content: space-around;
+}
+
+.old #about #skills .cards .card {
+    min-width    : 47%;
+    border       : 4px solid #32333011;
+    border-radius: 10px;
+    margin       : 10px;
+    text-align   : center;
+    padding      : 15px 15px 20px 15px;
+    position     : relative;
+    transition   : all 0.2s ease-in-out;
+}
+
+.old #about #skills .cards .card:hover {
+    transform: scale(1.05, 1.05);
+}
+
+.old #about #skills .cards .card h3 {
+    font-size     : 1.7em;
+    color         : #ead111;
+    border-bottom : 2px solid #ead11133;
+    padding-bottom: 10px;
+    margin-bottom : 10px;
+} */
+
+#skills ul {
+    list-style: none;
+    display   : flex;
+    flex-wrap : wrap;
+}
+
+#skills .languageSection:not(:first-child) {
+    margin-top: 2rem;
+}
+
+#skills ul li {
+    margin             : 1rem 1rem 0rem;
+    border             : 2px solid #32333088;
+    padding            : .5rem 1rem;
+    border-radius      : 8px;
+    display            : flex;
+    align-items        : center;
+    user-select        : none;
+    -webkit-user-select: none;
+    -moz-user-select   : -moz-none;
+}
+
+#skills ul li h5:matches("JavaScript") {
+    background-color: red;
+}
+
+#skills ul li:hover {
+    background-color: #f5f5f5;
+}
+
+#skills ul li img {
+    width        : 35px;
+    border-right : 2px solid;
+    border-radius: 2px;
+    padding-right: .5rem;
+    margin-right : .5rem;
+}
+
+.color1,
+.skillSection1 {
+    color: #1e6ef7 !important;
+}
+
+.skillSection1 {
+    border-bottom: 2px solid #1e6ef733 !important;
+}
+
+.color2,
+.skillSection2 {
+    color: #f8992c !important;
+}
+
+.skillSection2 {
+    border-bottom: 2px solid #f8992c33 !important;
+}
+
+.color3,
+.skillSection3 {
+    color: #13eabf !important;
+}
+
+.skillSection3 {
+    border-bottom: 2px solid #13eabf33 !important;
+}
+
+/* .old #about #skills .cards .card ul {
+    list-style: none;
+}
+
+.old #about #skills .cards .card ul li {
+    border-bottom: 2px solid #55555511;
+    padding      : 5px;
+    margin       : 10px 0;
+}
+
+.old #about #skills .cards .card ul li h5 {
+    font-size  : 1.1em;
+    font-weight: normal;
+    font-weight: 500;
+    margin     : 0;
+    padding    : 0;
+
+}
+
+.old #about #skills .cards .card ul li>span {
+    display          : inline-block;
+    padding          : 3px;
+    width            : 100%;
+    border-radius    : 13px;
+    border           : 2px solid #0000000f;
+    position       : relative;
+    text-transform : capitalize;
+    overflow       : hidden;
+    font-size      : 0.85em;
+    }
+
+.old #about #skills .cards .card ul li span span {
+    display         : inline-block;
+    position        : absolute;
+    top             : -5px;
+    left            : -5px;
+    bottom          : -5px;
+    background-color: #39ff0d54;
+    border-radius   : 20px;
+    transform       : translateX(-100%);
+    animation       : skillLoad 1.5s ease-in-out forwards;
+}
+
+@keyframes skillLoad {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+*/
+/* ///////////////////////////////////skills - end/////////////////////////////////// */
+
+
+/* ///////////////////////////////////////responsive start///////////////////////////////////////////////// */
+
+@media (max-width:1200px) {
+
+    /* .old #about #skills .cards .card {
+        min-width: 46%;
+        zoom     : 0.85;
+        padding  : 10px 5px 20px 5px;
+    }
+
+    .old #about #skills .cards .card ul li {
+        padding: 10px;
+        margin : 5px 0;
+    } */
+    .tabBar .tabHeader .tabButtons button {
+        white-space: nowrap;
+    }
+}
+
+@media (max-width:850px) {
+
+    /* .old #about #skills .cards .card {
+        min-width: 95%;
+    } */
+    #skills ul li {
+        zoom: 0.9;
+    }
+}
+
+@media (max-width:990px) {
+    .tabBar .tabContent {
+        padding: 0 10px;
+    }
+
+    .tabBar .tabHeader .tabButtons button {
+        font-size: 0.91em;
+        padding  : 5px 7px;
+    }
+
+    /* ///////////// self */
+    #about #self {
+        zoom: 0.95;
+    }
+
+    /* ///////// education, currentStatus, experience */
+    #about #education .educationCard,
+    #about #currentStatus .currentStatusCard,
+    #about #experience .experienceCard {
+        padding: 0px;
+    }
+
+    #about #education .educationCard .avatar .avatarLogo,
+    #about #currentStatus .currentStatusCard .avatar .avatarLogo,
+    #about #experience .experienceCard .avatar .avatarLogo {
+        width    : 70px;
+        height   : 70px;
+        font-size: 1em;
+    }
+
+    #about #education .educationCard h2,
+    #about #currentStatus .currentStatusCard h2,
+    #about #experience .experienceCard h2 {
+        font-size: 1.2em;
+    }
+
+    #about #education .educationCard h3,
+    #about #currentStatus .currentStatusCard h3,
+    #about #experience .experienceCard h3 {
+        font-size: 1em;
+    }
+
+    #about #education .educationCard .date,
+    #about #currentStatus .currentStatusCard .date,
+    #about #experience .experienceCard .date {
+        font-size: 0.95em;
+    }
+
+    #about #education .educationCard .other,
+    #about #currentStatus .currentStatusCard .other,
+    #about #experience .experienceCard .other {
+        font-size: 1em;
+    }
+}
+
+@media (max-width:600px) {
+    #about {
+        flex-direction: column;
+    }
+
+    #about .skImage {
+        display: none;
+    }
+
+    #about .skImageM {
+        display      : block;
+        margin       : 0;
+        border-radius: 5px;
+        width        : 222px;
+        margin       : 0 auto;
+    }
+
+    #about .aboutTabs {
+        width: 100%;
+    }
+
+    .tabBar .tabButtons {
+        flex-direction : row;
+        flex-wrap      : nowrap;
+        justify-content: center;
+        align-items    : center;
+    }
+
+    .tabBar .tabHeader .tabButtons button {
+        font-size: 0.8em;
+        padding  : 5px 7px;
+    }
+
+    /* //////////// self */
+    #about #self {
+        zoom: 0.9;
+    }
+
+    /* ///////// education, currentStatus, experience */
+    #about #education .educationCard .avatar .avatarLogo,
+    #about #currentStatus .currentStatusCard .avatar .avatarLogo,
+    #about #experience .experienceCard .avatar .avatarLogo {
+        width : 55px;
+        height: 55px;
+    }
+
+    #skills ul li {
+        zoom: 0.75;
+    }
+}
+
+/* ///////////////////////////////////////responsive end///////////////////////////////////////////////// */
