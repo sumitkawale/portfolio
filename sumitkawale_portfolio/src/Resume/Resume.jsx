@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import resumeDefault from "./sumitkawale_resume.pdf";
-import resumeLogo from "./resume_logo.svg";
 import { Link } from 'react-router-dom'
 
 import { imgSrc as src } from "../App/App";
@@ -33,7 +32,7 @@ const Resume = () => {
         </Link>
         <object id="resume-pdf-file" data={resumeDefault} type="application/pdf" aria-label="sumitkawale_resume" width="100%" height="100%">
             <a id="resume-download-link" target={"_blank"} rel="noreferrer" href={src + "doc/sumitkawale_resume.pdf"}>
-                <img src={resumeLogo} alt="icon" />
+                <img src={src + "resume_logo.svg"} alt="icon" />
                 <div>
                     <h2>download</h2>
                     <span>sumitkawale_resume.pdf</span>
