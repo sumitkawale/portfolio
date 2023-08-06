@@ -53,7 +53,7 @@ const Contact = () => {
             </div>
             <div className="contactMeForm">
                 <form>
-                    <img alt="programmer png" src={"/programmer.png"} style={{ width: "450px", mixBlendMode: "darken" }} />
+                    <img alt="programmer png" src={imgSrc + "programmer.png"} style={{ width: "450px", mixBlendMode: "darken" }} />
                 </form>
             </div>
         </div>
